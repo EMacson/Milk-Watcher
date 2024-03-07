@@ -1,4 +1,4 @@
-#https://www.youtube.com/watch?v=Kr1RyK6WENQ
+#https://www.youtube.com/watch?v=Kr1RyK6WENQ tutorial from reading from serial
 
 import instaloader
 import requests
@@ -15,7 +15,7 @@ r = requests.get(profile.profile_pic_url)
 while True:
     value = mySerial.readline()
     valueInString = str(value, 'UTF-8').strip()
-    print(valueInString)
+    #print(valueInString)
     if valueInString == "1":
         with open(f"{username}.jpg", 'wb') as photo:
             photo.write(r.content)
